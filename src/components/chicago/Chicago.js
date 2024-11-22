@@ -1,6 +1,6 @@
 import "./Chicago.css";
-import imga from "../../assets/img/Mario and Adrian A.jpg";
-import imgb from "../../assets/img/Mario and Adrian b.jpg";
+import imga from "../../assets/img/mario-adrian_one.jpg";
+import imgb from "../../assets/img/mario-adrian_two.jpg";
 
 const Chicago = () => {
     return (

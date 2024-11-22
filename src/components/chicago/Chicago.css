@@ -1,0 +1,124 @@
+html {
+    scroll-behavior: smooth;
+}
+
+.chicago-container {
+    min-height: 600px;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin: 20px 70px;
+}
+
+.chicago {
+    grid-column: 3 / span 8;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.chicago-text {
+    flex: 1;
+    text-align: justify;
+}
+
+.chicago-images {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.chicago-container h1 {
+    line-height: 40px;
+    color: #495e57;
+}
+
+.chicago-container h2 {
+    padding-bottom: 20px;
+}
+
+#text-limiter {
+    width: 28vw;
+}
+
+#img-a {
+    border: 1px solid black;
+    border-radius: 16px;
+    width: 270px;
+    height: 364px;
+    grid-column: 1 / span 6;
+    grid-row: 3 / span 6;
+    z-index: 0;
+    object-fit: cover;
+    object-position: -170px 0;
+}
+
+#img-b {
+    border: 1px solid black;
+    border-radius: 16px;
+    width: 268px;
+    height: 370px;
+    grid-column: 5 / span 6;
+    grid-row: 1 / span 6;
+    z-index: 1;
+    object-fit: cover;
+    object-position: -215px 0;
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 1440px) {
+    .chicago {
+        grid-column: 1 / span 12;
+        gap: 6vw;
+        justify-self: center;
+    }
+
+    #text-limiter {
+        width: 297px;
+    }
+
+    .chicago-container p {
+        width: 100%;
+    }
+
+    .chicago-images {
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 945px) {
+    #text-limiter {
+        min-width: 297px;
+        width: auto;
+        text-align: center;
+        padding: 0 70px;
+    }
+
+    .chicago {
+        gap: 50px;
+    }
+
+    .chicago-images {
+        justify-content: center;
+    }
+
+    #img-a {
+        width: 37.5vw;
+        height: 50.56vw;
+        object-position: -25vw 0;
+    }
+
+    #img-b {
+        width: 37.22vw;
+        height: 51.38vw;
+        object-position: -30vw 0;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    #text-limiter {
+        min-width: 31.43vw;
+        padding: 0 10px;
+    }
+}

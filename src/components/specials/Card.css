@@ -1,0 +1,54 @@
+.card {
+    background-color: #edefee;
+    border: #edefee 1px solid;
+    overflow: hidden;
+    border-radius: 16px;
+    width: 265px;
+    height: 471px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card > img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    aspect-ratio: 265 / 201;
+    border-radius: 16px;
+}
+
+.card-content {
+    display: grid;
+    grid-template-rows: 25px 30px 150px 72px;
+    height: 228px;
+    padding: 0 7%;
+    text-align: justify;
+}
+
+.title-price {
+    grid-row: 1 / span 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-price > p.highlight {
+    color: #ee9972;
+}
+
+p.description {
+    grid-row: 3 / span 1;
+}
+
+.order-line {
+    grid-row: 4 / span 1;
+
+    display: flex;
+    gap: 10px;
+}
+
+#bike {
+    width: 20px;
+    height: auto;
+}

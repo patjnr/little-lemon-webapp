@@ -1,0 +1,132 @@
+#reservation-header {
+    text-align: center;
+    color: #f4ce14;
+}
+
+.reservations {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    min-height: calc(100vh - 677px);
+}
+
+.reservation-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+    padding: 25px 20px;
+    gap: 5px;
+    border: 1px solid #edefee;
+    box-shadow: 0px 2px 4px #edefee;
+    border-radius: 16px;
+    overflow: hidden;
+    min-width: 340px;
+}
+
+.reservation-card:hover {
+    box-shadow: 0px 4px 8px #d8d8d8;
+}
+
+.reservation-card * {
+    color: #333333;
+}
+
+.button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    width: 100%;
+}
+
+.button-container button {
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+}
+
+.btn {
+    background-color: #4caf50;
+    color: #edefee;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+.btn.edit {
+    background-color: #495e57;
+}
+
+.btn.delete {
+    background-color: #f51b1b;
+}
+
+.btn h4 {
+    color: #edefee;
+}
+
+@media screen and (max-width: 500) {
+    .reservation-card {
+        max-width: 390px;
+    }
+}
+
+@media screen and (max-width: 900) {
+    .reservations {
+        flex-direction: column;
+    }
+}
+
+#reserve-button-reservations-page {
+    display: flex;
+    background-color: #f4ce14;
+    overflow: hidden;
+    color: #f4ce14;
+    border: none;
+    border-radius: 16px;
+    cursor: pointer;
+    width: 150px;
+    height: 50px;
+    justify-content: center;
+    justify-self: center;
+    justify-items: center;
+    align-content: center;
+    align-self: center;
+    align-items: center;
+    list-style: none;
+    text-decoration: none;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#reserve-button-reservations-page:active {
+    transform: scale(0.95);
+}
+
+#reserve-button-reservations-page h4 {
+    color: #333333;
+    background-color: #f4ce14;
+    justify-content: center;
+    align-content: center;
+    justify-self: center;
+    align-self: center;
+    justify-items: center;
+    align-items: center;
+}
+
+#reserve-button-reservations-page:hover {
+    background-color: #495e57;
+
+    & h4 {
+        color: #edefee;
+        background-color: #495e57;
+    }
+}

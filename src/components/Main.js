@@ -4,9 +4,7 @@ import BookingPage from "./bookingPage/BookingPage";
 import {useEffect, useReducer, useState} from "react";
 import {fetchAPI, submitAPI} from "../Api";
 import Reservations from "./reservations/Reservations";
-import {useLoading} from "../context/loadingContext";
 
-// Step 1: Update function
 export const updateTimes = (state, action) => {
     if (action.type === "update") {
         return fetchAPI(action.date);
@@ -22,40 +20,40 @@ export const getReservationsFromLocalStorage = () => {
     return (
         JSON.parse(localStorage.getItem("reservations")) || [
             {
-                id: 101,
-                name: "Johnny Depp",
-                date: "2025-01-01",
-                time: "18:00",
-                diners: 2,
+                id: 231,
+                name: "Emma Watson",
+                date: "2025-03-15",
+                time: "18:45",
+                diners: 3,
                 occasion: "Birthday",
-                table: {id: 1, name: "Main 1", reserved: true},
-                email: "jo@ddd.com",
-                phone: "045656565732",
-                specialRequests: "No Special Requests",
+                table: {id: 7, name: "Garden 3", reserved: true},
+                email: "emma@watson.com",
+                phone: "048765432198",
+                specialRequests: "Window seat",
             },
             {
-                id: 102,
-                name: "Scarlet Jonson",
-                date: "2025-01-02",
-                time: "19:00",
-                diners: 4,
-                occasion: "Anniversary",
-                table: {id: 2, name: "Main 2", reserved: false},
-                email: "sca@j.com",
-                phone: "565656548778",
-                specialRequests: "No Special Requests",
+                id: 542,
+                name: "Chris Evans",
+                date: "2025-02-20",
+                time: "19:30",
+                diners: 5,
+                occasion: "Reunion",
+                table: {id: 5, name: "Main 5", reserved: false},
+                email: "chris.evans@example.com",
+                phone: "048765432119",
+                specialRequests: "Allergic to peanuts",
             },
             {
-                id: 103,
-                name: "Jannet Smith",
-                date: "2025-01-03",
-                time: "20:00",
-                diners: 6,
-                occasion: "Graduation",
-                table: {id: 3, name: "Main 3", reserved: true},
-                email: "jan@smith.com",
-                phone: "565656548732",
-                specialRequests: "No Special Requests",
+                id: 389,
+                name: "Olivia Wilde",
+                date: "2025-04-05",
+                time: "20:15",
+                diners: 2,
+                occasion: "Romantic Dinner",
+                table: {id: 2, name: "Main 2", reserved: true},
+                email: "olivia.w@example.com",
+                phone: "048123456789",
+                specialRequests: "Candles on the table",
             },
         ]
     );
@@ -70,7 +68,6 @@ export const submitForm = (form) => {
 };
 
 export default function Main() {
-    const {toggleLoading} = useLoading();
     const initialTimes = initializeTimes();
     const [availableTimes, dispatch] = useReducer(updateTimes, initialTimes);
     const [reservations, setReservations] = useState(

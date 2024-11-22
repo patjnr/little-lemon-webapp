@@ -100,7 +100,9 @@ const BookingForm = (props) => {
     };
 
     useEffect(() => {
-        updateTimes(new Date(form.date));
+        if (form.date) {
+            updateTimes(new Date(form.date));
+        }
     }, [form.date]);
 
     const [formErrors, setFormErrors] = useState({

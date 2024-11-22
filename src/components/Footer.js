@@ -6,7 +6,6 @@ export default function Footer() {
             <menu className="footer-container">
                 <img id="img-footer" src={footerLogo} alt="footer logo"/>
 
-
                 <menu className="footer">
                     <h3>COMPANY</h3>
                     <li>
